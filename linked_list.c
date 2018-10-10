@@ -19,6 +19,8 @@ struct node * insert_front(struct node * n, int x){
   return ans;
 }
 
+
+
 int main(){
   struct node * gg = insert_front(NULL, 6);
   struct node * fr = insert_front(gg, 5);
