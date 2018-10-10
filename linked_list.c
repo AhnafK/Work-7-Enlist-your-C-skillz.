@@ -19,10 +19,21 @@ struct node * insert_front(struct node * n, int x){
   return ans;
 }
 
+struct node * free_list(struct node * n){
+  struct node * f = n;
+  while(f->next){
+    free(f);
+    f=f->next;
+  }
+  free(f);
+  return n;
+}
 
-
-int main(){
+/*int main(){
   struct node * gg = insert_front(NULL, 6);
   struct node * fr = insert_front(gg, 5);
   print_list(fr);
+  free(fr);
+  print_list(fr);
 }
+*/

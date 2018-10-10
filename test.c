@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include "linked_list.c"
 
+
 int main(){
-  struct node fr;
-  struct node gg;
-  fr.i = 5;
-  fr.next = *(gg);
-  gg.i = 6;
-  print_list(*(fr));
+  struct node * gg = insert_front(NULL, 6);
+  struct node * fr = insert_front(gg, 5);
+  print_list(fr);
+  free_list(fr);
+  print_list(fr);
 }
