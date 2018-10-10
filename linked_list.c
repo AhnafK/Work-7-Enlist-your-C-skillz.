@@ -20,9 +20,7 @@ struct node * insert_front(struct node * n, int x){
 }
 
 int main(){
-  struct node gg;
-  struct node * fr = insert_front(& gg, 5);
-  gg.i = 6;
-  gg.next = NULL;
+  struct node * gg = insert_front(NULL, 6);
+  struct node * fr = insert_front(gg, 5);
   print_list(fr);
 }
