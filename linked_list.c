@@ -12,12 +12,17 @@ void print_list(struct node * n){
   printf("%d\n", n->i);
 }
 
+struct node * insert_front(struct node * n, int x){
+  struct node *ans = malloc(10);
+  ans->i = x;
+  ans->next = n;
+  return ans;
+}
+
 int main(){
-  struct node fr;
   struct node gg;
-  fr.i = 5;
-  fr.next = & gg;
+  struct node * fr = insert_front(& gg, 5);
   gg.i = 6;
   gg.next = NULL;
-  print_list(& fr);
+  print_list(fr);
 }
